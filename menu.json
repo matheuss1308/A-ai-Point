@@ -1,0 +1,107 @@
+{
+  "sizes": [
+    {
+      "id": "s300",
+      "name": "300ml",
+      "price": 8.0
+    },
+    {
+      "id": "s400",
+      "name": "400ml",
+      "price": 10.0
+    },
+    {
+      "id": "s500",
+      "name": "500ml",
+      "price": 13.0
+    },
+    {
+      "id": "s700",
+      "name": "700ml",
+      "price": 17.0
+    },
+    {
+      "id": "s1l",
+      "name": "1 Litro",
+      "price": 24.0
+    }
+  ],
+  "flavors": [
+    "Banana",
+    "Morango",
+    "Maracujá",
+    "Natural",
+    "Cupuaçu"
+  ],
+  "sauces": [
+    "Chocolate",
+    "Morango",
+    "Uva",
+    "Caramelo",
+    "Maracujá",
+    "Kiwi",
+    "Graviola",
+    "Amora",
+    "Tutti Frutti",
+    "Menta",
+    "Banana Caramelada"
+  ],
+  "freeIngredients": [
+    "Leite em Pó",
+    "Paçoca",
+    "Amendoim",
+    "Granola",
+    "Chocoboll",
+    "Sucrilhos",
+    "Flocos de Arroz",
+    "Jujuba",
+    "Aveia",
+    "M&M",
+    "Ovomaltine",
+    "Cookies",
+    "Boll",
+    "Granulado"
+  ],
+  "premium": [
+    {
+      "id": "p60",
+      "name": "Nutella",
+      "price": 7.0
+    },
+    {
+      "id": "p61",
+      "name": "Creme de Avelã",
+      "price": 5.0
+    },
+    {
+      "id": "p62",
+      "name": "Creme Galak",
+      "price": 5.0
+    },
+    {
+      "id": "p63",
+      "name": "Creme de Amendoim",
+      "price": 5.0
+    },
+    {
+      "id": "p64",
+      "name": "Leite Condensado",
+      "price": 2.0
+    },
+    {
+      "id": "p65",
+      "name": "Calda Fini",
+      "price": 2.0
+    },
+    {
+      "id": "p66",
+      "name": "Fruta Morango",
+      "price": 3.0
+    },
+    {
+      "id": "p67",
+      "name": "Chantininho",
+      "price": 3.0
+    }
+  ]
+}

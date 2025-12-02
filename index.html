@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Açaí Point — Monte seu Açaí</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Açaí Point</h1>
+      <button id="openAdmin" class="btn secondary">Painel Admin</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Bem-vindo ao Açaí Point — O sabor que te levanta!</h2>
+        <p>Monte seu açaí do seu jeito: escolha sabor, calda, ingredientes (até 6 grátis) e complementos premium.</p>
+        <button id="startOrder" class="btn primary large">Monte seu açaí agora</button>
+      </div>
+      <div class="hero-right">
+        <img src="assets/placeholder-acai.png" alt="Açaí" class="hero-img">
+      </div>
+    </section>
+
+    <section id="builder" class="builder" aria-label="Montador de Açaí">
+      <h3>1) Escolha o sabor do açaí</h3>
+      <div id="flavors" class="options"></div>
+
+      <h3>2) Escolha o tamanho</h3>
+      <div id="sizes" class="options"></div>
+
+      <h3>3) Escolha a calda (1 grátis)</h3>
+      <div id="sauces" class="options"></div>
+
+      <h3>4) Escolha até 6 ingredientes grátis</h3>
+      <div id="freeIngredients" class="options"></div>
+      <div id="freeCounter" class="hint">Selecionados: 0 / 6</div>
+
+      <h3>5) Complementos premium (pagos)</h3>
+      <div id="premium" class="options"></div>
+
+      <div class="order-summary">
+        <div><strong>Resumo:</strong></div>
+        <div id="summaryText">Nenhuma seleção.</div>
+        <div class="total">Total: <span id="totalPrice">R$ 0,00</span></div>
+        <input id="customerName" placeholder="Seu nome (opcional)" />
+        <input id="customerAddress" placeholder="Endereço (opcional)" />
+        <button id="sendWhatsapp" class="btn whatsapp">Enviar pedido no WhatsApp</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Açaí Point — Peça pelo WhatsApp • <a href="https://instagram.com/acai.point.22" target="_blank">@acai.point.22</a></p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

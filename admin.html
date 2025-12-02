@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Painel Admin — Açaí Point</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="admin-header"><div class="container"><h1>Painel Admin — Açaí Point</h1></div></header>
+  <main class="container admin-main">
+    <section class="panel">
+      <h2>Menu (editar / adicionar / excluir)</h2>
+      <div id="menuEditor"></div>
+      <button id="addSize" class="btn">Adicionar Tamanho</button>
+      <button id="addPremium" class="btn">Adicionar Complemento Premium</button>
+    </section>
+
+    <section class="panel">
+      <h2>Pedidos (registrados)</h2>
+      <div id="ordersList"></div>
+      <button id="closeDay" class="btn primary">Fechar Conta do Dia</button>
+      <div id="dayTotal" class="hint"></div>
+      <canvas id="salesChart" width="600" height="300"></canvas>
+    </section>
+  </main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
