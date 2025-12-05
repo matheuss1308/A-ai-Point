@@ -1,18 +1,4 @@
 [
-  {
-    "id": "pr1",
-    "title": "Combo A\u00e7a\u00ed + Granola",
-    "subtitle": "300ml + Granola",
-    "price": 12.0,
-    "img": null,
-    "duration": 5000
-  },
-  {
-    "id": "pr2",
-    "title": "A\u00e7a\u00ed Morango 500ml",
-    "subtitle": "Promo\u00e7\u00e3o especial",
-    "price": 13.0,
-    "img": null,
-    "duration": 5000
-  }
+  {"id":"pr1","title":"Combo Açaí + Granola","subtitle":"300ml + Granola","price":12.00,"img":"assets/cup1.png","duration":5000},
+  {"id":"pr2","title":"Açaí Morango 500ml","subtitle":"Promoção especial","price":13.00,"img":"assets/cup2.png","duration":5000}
 ]
