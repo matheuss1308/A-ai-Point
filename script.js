@@ -1,2 +1,2 @@
-// JS base
-console.log('Painel Misto carregado');
+// script principal
+console.log('FinalAçai carregado');

@@ -1,41 +1,17 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Painel Admin — Açaí Point</title>
-  <link rel="stylesheet" href="admin.css">
+<meta charset="UTF-8" />
+<title>Admin - FinalAçai</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="admin-header"><div class="container"><h1>Painel Admin — Açaí Point</h1></div></header>
-  <main class="container admin-main">
-    <section class="panel" id="loginPanel">
-      <h2>Login</h2>
-      <form id="loginForm">
-        <input id="login" placeholder="Login" required />
-        <input id="password" type="password" placeholder="Senha" required />
-        <button type="submit" class="btn primary">Entrar</button>
-      </form>
-    </section>
-
-    <section class="panel" id="adminArea" style="display:none">
-      <h2>Menu (editar / adicionar / excluir)</h2>
-      <div id="menuEditor"></div>
-      <button id="addSize" class="btn">Adicionar Tamanho</button>
-      <button id="addPremium" class="btn">Adicionar Complemento Premium</button>
-
-      <h2>Promoções (Painel Misto)</h2>
-      <div id="promosEditor"></div>
-
-      <h2>Pedidos (registrados)</h2>
-      <div id="ordersList"></div>
-      <button id="closeDay" class="btn primary">Fechar Conta do Dia</button>
-      <div id="dayTotal" class="hint"></div>
-      <canvas id="salesChart" width="600" height="300"></canvas>
-    </section>
-  </main>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body class="bg-gray-100">
+<div class="p-6 max-w-md mx-auto bg-white rounded-xl shadow">
+<h1 class="text-2xl font-bold mb-4 text-center">Painel Admin</h1>
+<input id="user" class="w-full border p-2 mb-2" placeholder="Usuário">
+<input id="pass" type="password" class="w-full border p-2 mb-4" placeholder="Senha">
+<button onclick="login()" class="w-full bg-purple-600 text-white p-2 rounded">Entrar</button>
+</div>
 <script src="admin.js"></script>
 </body>
 </html>

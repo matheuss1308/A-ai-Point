@@ -1,22 +1,12 @@
-{
-  "sizes":[
-    {"id":"s300","name":"300ml","price":8.00},
-    {"id":"s400","name":"400ml","price":10.00},
-    {"id":"s500","name":"500ml","price":13.00},
-    {"id":"s700","name":"700ml","price":17.00},
-    {"id":"s1l","name":"1 Litro","price":24.00}
-  ],
-  "flavors":[ "Banana","Morango","Maracujá","Natural","Cupuaçu" ],
-  "sauces":[ "Chocolate","Morango","Uva","Caramelo","Maracujá","Kiwi","Graviola","Amora","Tutti Frutti","Menta","Banana Caramelada" ],
-  "freeIngredients":[ "Leite em Pó","Paçoca","Amendoim","Granola","Chocoboll","Sucrilhos","Flocos de Arroz","Jujuba","Aveia","M&M","Ovomaltine","Cookies","Boll","Granulado" ],
-  "premium":[
-    {"id":"p60","name":"Nutella","price":7.00},
-    {"id":"p61","name":"Creme de Avelã","price":5.00},
-    {"id":"p62","name":"Creme Galak","price":5.00},
-    {"id":"p63","name":"Creme de Amendoim","price":5.00},
-    {"id":"p64","name":"Leite Condensado","price":2.00},
-    {"id":"p65","name":"Calda Fini","price":2.00},
-    {"id":"p66","name":"Fruta Morango","price":3.00},
-    {"id":"p67","name":"Chantininho","price":3.00}
-  ]
-}
+[
+  {
+    "id": "1",
+    "name": "A\u00e7a\u00ed 300ml",
+    "price": 10.0
+  },
+  {
+    "id": "2",
+    "name": "A\u00e7a\u00ed 500ml",
+    "price": 14.0
+  }
+]
