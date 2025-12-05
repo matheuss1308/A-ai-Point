@@ -1,10 +1,9 @@
 export default function handler(req, res) {
   const { login, password } = req.body || {};
-  const ADMIN_LOGIN = "acaipoint";
-  const ADMIN_PASSWORD = "012208";
-  if (login === ADMIN_LOGIN && password === ADMIN_PASSWORD) {
+  // simple check - change to env vars for production
+  if (login === 'acaipoint' && password === '012208') {
     return res.status(200).json({ success: true });
   } else {
-    return res.status(401).json({ success: false, message: "Credenciais inválidas." });
+    return res.status(401).json({ success: false });
   }
 }
