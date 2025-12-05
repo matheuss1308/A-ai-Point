@@ -1,17 +1,45 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<title>Admin - FinalAçai</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Painel Admin - Açaí Point</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-100">
-<div class="p-6 max-w-md mx-auto bg-white rounded-xl shadow">
-<h1 class="text-2xl font-bold mb-4 text-center">Painel Admin</h1>
-<input id="user" class="w-full border p-2 mb-2" placeholder="Usuário">
-<input id="pass" type="password" class="w-full border p-2 mb-4" placeholder="Senha">
-<button onclick="login()" class="w-full bg-purple-600 text-white p-2 rounded">Entrar</button>
-</div>
-<script src="admin.js"></script>
+<body class="bg-gray-50">
+  <div class="max-w-5xl mx-auto p-6">
+    <div id="loginPanel" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-4">Login Admin</h2>
+      <input id="login" placeholder="Login" class="w-full border p-2 rounded mb-3"/>
+      <input id="password" placeholder="Senha" type="password" class="w-full border p-2 rounded mb-3"/>
+      <button id="doLogin" class="w-full bg-purple-700 text-white p-2 rounded">Entrar</button>
+    </div>
+
+    <div id="adminArea" style="display:none">
+      <h1 class="text-2xl font-bold mb-4">Painel Admin</h1>
+
+      <section class="bg-white p-4 rounded shadow mb-4">
+        <h3 class="font-bold">Promoções</h3>
+        <div id="promosEditor" class="mt-2"></div>
+        <button id="addPromo" class="mt-3 bg-green-500 text-white px-3 py-2 rounded">Adicionar promoção</button>
+      </section>
+
+      <section class="bg-white p-4 rounded shadow mb-4">
+        <h3 class="font-bold">Menu</h3>
+        <div id="menuEditor" class="mt-2"></div>
+        <button id="addSize" class="mt-3 bg-indigo-500 text-white px-3 py-2 rounded">Adicionar tamanho</button>
+      </section>
+
+      <section class="bg-white p-4 rounded shadow mb-4">
+        <h3 class="font-bold">Pedidos</h3>
+        <div id="ordersList" class="mt-2"></div>
+        <button id="closeDay" class="mt-3 bg-purple-600 text-white px-3 py-2 rounded">Fechar conta do dia</button>
+        <div id="dayTotal" class="mt-2 text-sm"></div>
+      </section>
+    </div>
+  </div>
+
+<script src="js/admin.js"></script>
 </body>
 </html>
