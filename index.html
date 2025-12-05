@@ -8,9 +8,9 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-row">
       <h1 class="brand">Açaí Point</h1>
-      <button id="openAdmin" class="btn secondary">Painel Admin</button>
+      <a class="btn admin-link" href="/admin.html">Painel Admin</a>
     </div>
   </header>
 
@@ -26,21 +26,32 @@
       </div>
     </section>
 
+    <!-- Stories-style Promo Panel -->
+    <section id="promoPanel" class="promo-panel">
+      <h3>Promoções</h3>
+      <div id="stories" class="stories-container">
+        <button id="prevStory" class="story-nav left" aria-label="Anterior">&larr;</button>
+        <button id="nextStory" class="story-nav right" aria-label="Próximo">&rarr;</button>
+      </div>
+      <div id="storyDots" class="story-dots" aria-hidden="true"></div>
+    </section>
+
+    <!-- Builder -->
     <section id="builder" class="builder" aria-label="Montador de Açaí">
-      <h3>1) Escolha o sabor do açaí</h3>
+      <h3 id="step1">1) Escolha o sabor do açaí</h3>
       <div id="flavors" class="options"></div>
 
-      <h3>2) Escolha o tamanho</h3>
+      <h3 id="step2">2) Escolha o tamanho</h3>
       <div id="sizes" class="options"></div>
 
-      <h3>3) Escolha a calda (1 grátis)</h3>
+      <h3 id="step3">3) Escolha a calda (1 grátis)</h3>
       <div id="sauces" class="options"></div>
 
-      <h3>4) Escolha até 6 ingredientes grátis</h3>
+      <h3 id="step4">4) Escolha até 6 ingredientes grátis</h3>
       <div id="freeIngredients" class="options"></div>
       <div id="freeCounter" class="hint">Selecionados: 0 / 6</div>
 
-      <h3>5) Complementos premium (pagos)</h3>
+      <h3 id="step5">5) Complementos premium (pagos)</h3>
       <div id="premium" class="options"></div>
 
       <div class="order-summary">
@@ -52,7 +63,6 @@
         <button id="sendWhatsapp" class="btn whatsapp">Enviar pedido no WhatsApp</button>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
