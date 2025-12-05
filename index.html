@@ -1,15 +1,103 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<title>Final Açaí</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Açaí Point</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-purple-100">
-<div class="p-6 text-center">
-<h1 class="text-4xl font-bold text-purple-700">FinalAçai</h1>
-<p class="mt-2 text-lg">Monte seu açaí e faça o pedido!</p>
-</div>
-<script src="script.js"></script>
-</body>
-</html>
+
+<body class="bg-white text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-r from-purple-700 to-pink-500 text-white p-6">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-purple-700 font-bold">AP</div>
+        <div>
+          <h1 class="text-2xl font-extrabold">Açaí Point</h1>
+          <p class="text-sm opacity-80">O sabor que te levanta</p>
+        </div>
+      </div>
+      <a href="admin.html" class="bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold">
+        Painel Admin
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto p-6">
+
+    <!-- HERO -->
+    <section class="grid md:grid-cols-2 gap-6 items-center mb-10">
+      <div>
+        <h2 class="text-5xl font-extrabold text-purple-800 mb-4">
+          Bem-vindo ao Açaí Point — O sabor que te levanta!
+        </h2>
+
+        <p class="text-lg text-gray-700 mb-6">
+          Monte seu copo do seu jeito — escolha sabor, calda, ingredientes grátis e adicionais premium.
+        </p>
+
+        <a href="#builder"
+           class="inline-block bg-pink-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition">
+           Monte seu açaí agora
+        </a>
+      </div>
+
+      <div class="flex justify-center">
+        <img src="assets/banner.png" alt="Açaí" class="rounded-2xl shadow-xl w-80 h-auto">
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="bg-white rounded-2xl p-6 shadow mb-8">
+      <h3 class="text-3xl text-center font-bold text-purple-700 mb-6">Menu</h3>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-end">
+
+        <div class="text-center">
+          <img src="assets/cup1.png" class="mx-auto w-40 h-auto mb-3" alt="300ml">
+          <p class="font-semibold text-purple-700">Açaí 300ml</p>
+          <p class="text-lg font-bold">R$ 8,00</p>
+        </div>
+
+        <div class="text-center">
+          <img src="assets/cup2.png" class="mx-auto w-40 h-auto mb-3" alt="400ml">
+          <p class="font-semibold text-purple-700">Açaí 400ml</p>
+          <p class="text-lg font-bold">R$ 10,00</p>
+        </div>
+
+        <div class="text-center">
+          <img src="assets/cup3.png" class="mx-auto w-40 h-auto mb-3" alt="500ml">
+          <p class="font-semibold text-purple-700">Açaí 500ml</p>
+          <p class="text-lg font-bold">R$ 13,00</p>
+        </div>
+
+        <div class="text-center">
+          <img src="assets/cup4.png" class="mx-auto w-40 h-auto mb-3" alt="700ml">
+          <p class="font-semibold text-purple-700">Açaí 700ml</p>
+          <p class="text-lg font-bold">R$ 17,00</p>
+        </div>
+
+      </div>
+
+      <div class="mt-8 text-center">
+        <a id="whatsappBtn" href="#" class="inline-block bg-green-500 text-white px-8 py-4 rounded-full text-xl font-bold shadow">
+          Enviar pedido no WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- STORIES / PROMOÇÕES -->
+    <section class="promo-panel mb-8">
+      <h3 class="text-2xl font-bold mb-4">Promoções</h3>
+
+      <div id="stories" class="relative rounded-lg overflow-hidden bg-purple-800 text-white h-64 flex items-center justify-center"></div>
+      <div id="storyDots" class="flex justify-center gap-2 mt-3"></div>
+    </section>
+
+    <!-- BUILDER -->
+    <section id="builder" class="bg-gray-50 rounded-2xl p-6 shadow">
+      <h3 class="text-2xl font-bold mb-4">Monte seu Açaí</h3>
