@@ -1,117 +1,64 @@
-/* ===============================
-   C.I.A – IA Local com Wake Word
-   Estrutura limpa e profissional
-   =============================== */
+// ===============================
+//  DASHBOARD AÇAÍ POINT - APP.JS
+// ===============================
 
-// CONFIGURAÇÕES PRINCIPAIS
-const config = {
-    wakeWord: "cia",
-    confidenceThreshold: 0.75,
-    listening: false,
-};
+// Dados de vendas (exemplo realista)
+const salesData = [
+    { day: "01 Dez", value: 150 },
+    { day: "02 Dez", value: 210 },
+    { day: "03 Dez", value: 180 },
+    { day: "04 Dez", value: 260 },
+    { day: "05 Dez", value: 300 },
+    { day: "06 Dez", value: 280 },
+    { day: "07 Dez", value: 350 }
+];
 
-// ELEMENTOS DA INTERFACE
-const ui = {
-    status: document.getElementById("status"),
-    output: document.getElementById("output"),
-    micButton: document.getElementById("micButton"),
-};
+// Elementos
+const totalSalesEl = document.getElementById("total-sales");
+const dailyAverageEl = document.getElementById("daily-average");
+const bestDayEl = document.getElementById("best-day");
+const salesChartCanvas = document.getElementById("salesChart");
 
-// --- UTILITÁRIOS ---------------------------------------
+// Cálculos do Dashboard
+function calculateDashboard() {
+    const total = salesData.reduce((acc, item) => acc + item.value, 0);
+    const average = Math.round(total / salesData.length);
+    const bestDay = salesData.reduce((max, item) =>
+        item.value > max.value ? item : max
+    );
 
-function log(msg) {
-    console.log("[C.I.A]", msg);
+    totalSalesEl.textContent = `R$ ${total},00`;
+    dailyAverageEl.textContent = `R$ ${average},00`;
+    bestDayEl.textContent = `${bestDay.day} — R$ ${bestDay.value},00`;
 }
 
-function speak(text) {
-    const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = "pt-BR";
-    speechSynthesis.speak(utter);
+// Gráfico
+function renderChart() {
+    new Chart(salesChartCanvas, {
+        type: "line",
+        data: {
+            labels: salesData.map(d => d.day),
+            datasets: [{
+                label: "Vendas por dia",
+                data: salesData.map(d => d.value),
+                borderWidth: 3,
+                fill: true,
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
 }
 
-// --- RECONHECIMENTO DE VOZ ------------------------------
-
-let recognizer;
-
-async function initSpeechRecognition() {
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    recognizer = new SpeechRecognition();
-
-    recognizer.lang = "pt-BR";
-    recognizer.continuous = true;
-    recognizer.interimResults = false;
-
-    recognizer.onresult = (event) => {
-        const transcript = event.results[event.resultIndex][0].transcript.toLowerCase().trim();
-        handleVoiceInput(transcript);
-    };
-
-    recognizer.onerror = (e) => log(`Erro de áudio: ${e.error}`);
+// Inicialização
+function initDashboard() {
+    calculateDashboard();
+    renderChart();
 }
 
-function startListening() {
-    if (!recognizer) return;
-    recognizer.start();
-    config.listening = true;
-    ui.status.textContent = "Ouvindo...";
-    ui.micButton.classList.add("active");
-}
-
-function stopListening() {
-    if (!recognizer) return;
-    recognizer.stop();
-    config.listening = false;
-    ui.status.textContent = "Parado";
-    ui.micButton.classList.remove("active");
-}
-
-// --- PROCESSAMENTO DE COMANDO ---------------------------
-
-function handleVoiceInput(text) {
-    ui.output.textContent = text;
-    log("Usuário disse: " + text);
-
-    // só responde depois do wake word "cia"
-    if (text.startsWith(config.wakeWord)) {
-        const command = text.replace(config.wakeWord, "").trim();
-        executeCommand(command);
-    }
-}
-
-function executeCommand(command) {
-    log("Comando: " + command);
-
-    if (command.includes("olá") || command.includes("oi")) {
-        speak("Olá! Como posso ajudar?");
-        return;
-    }
-
-    if (command.includes("horas")) {
-        const h = new Date().toLocaleTimeString("pt-BR");
-        speak("Agora são " + h);
-        return;
-    }
-
-    if (command.includes("parar")) {
-        speak("Encerrando escuta.");
-        stopListening();
-        return;
-    }
-
-    // comando genérico
-    speak("Não entendi o comando, mas posso tentar aprender.");
-}
-
-// --- INICIALIZAÇÃO GLOBAL -------------------------------
-
-async function initCIA() {
-    await initSpeechRecognition();
-    log("Sistema pronto.");
-    ui.status.textContent = "Pronto";
-}
-
-ui.micButton.addEventListener("click", () => {
-    config.listening ? stopListening() : startListening();
-});
-
-initCIA();
+// Start
+document.addEventListener("DOMContentLoaded", initDashboard);
