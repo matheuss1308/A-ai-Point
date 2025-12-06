@@ -1,2 +1,128 @@
-/* CSS base */
-body { font-family: Arial; }
+/* ===========================
+   ESTILO GLOBAL
+=========================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #faf7ff;
+  overflow-x: hidden;
+}
+
+/* Suavidade global */
+* {
+  transition: all .25s ease;
+}
+
+/* ===========================
+   CARDS — COPOS DE AÇAÍ
+=========================== */
+.cup-card {
+  background: white;
+  padding: 20px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(120, 0, 160, 0.15);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.cup-card:hover {
+  border-color: #b026ff;
+  transform: translateY(-6px);
+}
+
+.cup-img {
+  width: 140px;
+  height: auto;
+  margin: 0 auto 12px;
+  filter: drop-shadow(0 5px 12px rgba(0,0,0,.25));
+}
+
+.cup-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #6b21a8;
+  margin-bottom: 4px;
+}
+
+.cup-price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111;
+}
+
+/* ===========================
+   WHATSAPP BUTTON
+=========================== */
+.whatsapp-btn {
+  background: #25d366;
+  color: white;
+  padding: 18px 36px;
+  border-radius: 40px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(0,150,0,0.3);
+}
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   STORIES / PAINEL PROMOÇÕES
+=========================== */
+.story-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #4b0082;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(120, 0, 160, 0.25);
+}
+
+#stories img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-dots {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.story-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.story-dot.active {
+  background: #b026ff;
+  transform: scale(1.3);
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp .8s ease forwards;
+}
+
+.animate-fade-left {
+  animation: fadeLeft .9s ease forwards;
+}
