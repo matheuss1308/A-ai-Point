@@ -6,98 +6,116 @@
 <title>Açaí Point</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-white text-gray-800">
+<body class="bg-[#faf7ff] text-gray-800 font-[Poppins]">
 
-  <!-- HEADER -->
-  <header class="bg-gradient-to-r from-purple-700 to-pink-500 text-white p-6">
-    <div class="max-w-6xl mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-purple-700 font-bold">AP</div>
-        <div>
-          <h1 class="text-2xl font-extrabold">Açaí Point</h1>
-          <p class="text-sm opacity-80">O sabor que te levanta</p>
-        </div>
+<!-- ===================== HEADER ===================== -->
+<header class="bg-gradient-to-r from-purple-700 to-pink-500 text-white p-6 shadow-lg">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <img src="assets/logo.png" class="w-14 h-14 rounded-full shadow-md">
+      <div>
+        <h1 class="text-3xl font-extrabold tracking-tight">Açaí Point</h1>
+        <p class="text-sm opacity-80 -mt-1">O sabor que te levanta</p>
       </div>
-      <a href="admin.html" class="bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold">
-        Painel Admin
+    </div>
+
+    <a href="admin.html"
+       class="bg-white text-purple-700 px-5 py-2 rounded-xl font-bold shadow hover:scale-105 transition">
+       Painel Admin
+    </a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="w-full bg-white shadow-xl rounded-b-3xl pb-10 mb-10">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 p-6 items-center">
+
+    <!-- Texto -->
+    <div class="animate-fade-up">
+      <h2 class="text-5xl md:text-6xl font-extrabold text-purple-800 leading-tight mb-5">
+        O melhor Açaí<br> da sua região 🍇
+      </h2>
+
+      <p class="text-lg text-gray-600 mb-6">
+        Escolha o tamanho, sabor, cobertura, ingredientes grátis e adicionai premium!
+      </p>
+
+      <a href="#builder"
+         class="inline-block bg-pink-600 text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:scale-110 transition">
+         Monte seu Açaí 🍧
       </a>
     </div>
-  </header>
 
-  <!-- MAIN -->
-  <main class="max-w-6xl mx-auto p-6">
+    <!-- Banner -->
+    <div class="flex justify-center animate-fade-left">
+      <img src="assets/banner.png" class="rounded-3xl shadow-2xl w-96">
+    </div>
+  </div>
+</section>
 
-    <!-- HERO -->
-    <section class="grid md:grid-cols-2 gap-6 items-center mb-10">
-      <div>
-        <h2 class="text-5xl font-extrabold text-purple-800 mb-4">
-          Bem-vindo ao Açaí Point — O sabor que te levanta!
-        </h2>
+<!-- ===================== STORIES ===================== -->
+<section class="max-w-6xl mx-auto p-6">
+  <h3 class="text-3xl font-extrabold text-purple-700 mb-4 text-center">
+    Promoções • Stories
+  </h3>
 
-        <p class="text-lg text-gray-700 mb-6">
-          Monte seu copo do seu jeito — escolha sabor, calda, ingredientes grátis e adicionais premium.
-        </p>
+  <div id="stories" class="story-container"></div>
+  <div id="storyDots" class="story-dots"></div>
+</section>
 
-        <a href="#builder"
-           class="inline-block bg-pink-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition">
-           Monte seu açaí agora
-        </a>
-      </div>
+<!-- ===================== MENU ===================== -->
+<section class="max-w-6xl mx-auto p-6 mt-8 bg-white rounded-3xl shadow-xl">
+  <h3 class="text-3xl font-extrabold text-purple-700 mb-8 text-center">Nossos Copos</h3>
 
-      <div class="flex justify-center">
-        <img src="assets/banner.png" alt="Açaí" class="rounded-2xl shadow-xl w-80 h-auto">
-      </div>
-    </section>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
 
-    <!-- MENU -->
-    <section class="bg-white rounded-2xl p-6 shadow mb-8">
-      <h3 class="text-3xl text-center font-bold text-purple-700 mb-6">Menu</h3>
+    <div class="cup-card">
+      <img src="assets/cup1.png" class="cup-img">
+      <h4 class="cup-title">Açaí 300ml</h4>
+      <p class="cup-price">R$ 8,00</p>
+    </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-end">
+    <div class="cup-card">
+      <img src="assets/cup2.png" class="cup-img">
+      <h4 class="cup-title">Açaí 400ml</h4>
+      <p class="cup-price">R$ 10,00</p>
+    </div>
 
-        <div class="text-center">
-          <img src="assets/cup1.png" class="mx-auto w-40 h-auto mb-3" alt="300ml">
-          <p class="font-semibold text-purple-700">Açaí 300ml</p>
-          <p class="text-lg font-bold">R$ 8,00</p>
-        </div>
+    <div class="cup-card">
+      <img src="assets/cup3.png" class="cup-img">
+      <h4 class="cup-title">Açaí 500ml</h4>
+      <p class="cup-price">R$ 13,00</p>
+    </div>
 
-        <div class="text-center">
-          <img src="assets/cup2.png" class="mx-auto w-40 h-auto mb-3" alt="400ml">
-          <p class="font-semibold text-purple-700">Açaí 400ml</p>
-          <p class="text-lg font-bold">R$ 10,00</p>
-        </div>
+    <div class="cup-card">
+      <img src="assets/cup4.png" class="cup-img">
+      <h4 class="cup-title">Açaí 700ml</h4>
+      <p class="cup-price">R$ 17,00</p>
+    </div>
 
-        <div class="text-center">
-          <img src="assets/cup3.png" class="mx-auto w-40 h-auto mb-3" alt="500ml">
-          <p class="font-semibold text-purple-700">Açaí 500ml</p>
-          <p class="text-lg font-bold">R$ 13,00</p>
-        </div>
+  </div>
 
-        <div class="text-center">
-          <img src="assets/cup4.png" class="mx-auto w-40 h-auto mb-3" alt="700ml">
-          <p class="font-semibold text-purple-700">Açaí 700ml</p>
-          <p class="text-lg font-bold">R$ 17,00</p>
-        </div>
+  <div class="mt-10 text-center">
+    <a id="whatsappBtn" href="#" class="whatsapp-btn">
+      Enviar pedido no WhatsApp
+    </a>
+  </div>
+</section>
 
-      </div>
+<!-- ===================== MONTAR AÇAÍ ===================== -->
+<section id="builder" class="max-w-6xl mx-auto p-6 mt-12 bg-gray-50 rounded-3xl shadow-xl">
+  <h3 class="text-3xl font-extrabold text-purple-700 mb-6">Monte seu Açaí</h3>
 
-      <div class="mt-8 text-center">
-        <a id="whatsappBtn" href="#" class="inline-block bg-green-500 text-white px-8 py-4 rounded-full text-xl font-bold shadow">
-          Enviar pedido no WhatsApp
-        </a>
-      </div>
-    </section>
+  <div id="builderArea" class="text-gray-700 text-lg">
+    Carregando opções...
+  </div>
+</section>
 
-    <!-- STORIES / PROMOÇÕES -->
-    <section class="promo-panel mb-8">
-      <h3 class="text-2xl font-bold mb-4">Promoções</h3>
+<script src="js/app.js"></script>
 
-      <div id="stories" class="relative rounded-lg overflow-hidden bg-purple-800 text-white h-64 flex items-center justify-center"></div>
-      <div id="storyDots" class="flex justify-center gap-2 mt-3"></div>
-    </section>
-
-    <!-- BUILDER -->
-    <section id="builder" class="bg-gray-50 rounded-2xl p-6 shadow">
-      <h3 class="text-2xl font-bold mb-4">Monte seu Açaí</h3>
+</body>
+</html>
