@@ -1,128 +1,110 @@
-/* ===========================
-   ESTILO GLOBAL
-=========================== */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #faf7ff;
-  overflow-x: hidden;
-}
-
-/* Suavidade global */
+/* RESET */
 * {
-  transition: all .25s ease;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* ===========================
-   CARDS — COPOS DE AÇAÍ
-=========================== */
-.cup-card {
-  background: white;
-  padding: 20px;
-  border-radius: 24px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(120, 0, 160, 0.15);
-  cursor: pointer;
-  border: 2px solid transparent;
+body {
+  background: #4b0082;
+  color: #fff;
 }
 
-.cup-card:hover {
-  border-color: #b026ff;
-  transform: translateY(-6px);
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
 }
 
-.cup-img {
-  width: 140px;
-  height: auto;
-  margin: 0 auto 12px;
-  filter: drop-shadow(0 5px 12px rgba(0,0,0,.25));
-}
-
-.cup-title {
-  font-size: 1.2rem;
+.hero-text h1 {
+  font-size: 48px;
   font-weight: 700;
-  color: #6b21a8;
-  margin-bottom: 4px;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-.cup-price {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: #111;
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 420px;
+  opacity: 0.9;
 }
 
-/* ===========================
-   WHATSAPP BUTTON
-=========================== */
-.whatsapp-btn {
-  background: #25d366;
-  color: white;
-  padding: 18px 36px;
-  border-radius: 40px;
-  font-size: 1.4rem;
-  font-weight: 800;
+.btn-main {
   display: inline-block;
-  box-shadow: 0 8px 20px rgba(0,150,0,0.3);
+  margin-top: 30px;
+  background: #ff3ba7;
+  padding: 16px 28px;
+  border-radius: 40px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
 }
-.whatsapp-btn:hover {
+
+.btn-main:hover {
   transform: scale(1.05);
 }
 
-/* ===========================
-   STORIES / PAINEL PROMOÇÕES
-=========================== */
-.story-container {
-  width: 100%;
-  height: 350px;
-  border-radius: 25px;
-  overflow: hidden;
-  background: #4b0082;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(120, 0, 160, 0.25);
+.hero-image img {
+  width: 340px;
+  filter: drop-shadow(0 15px 18px rgba(0,0,0,.25));
 }
 
-#stories img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* MENU SECTION */
+.menu-section {
+  padding: 80px 10%;
+  background: #fff;
+  color: #4b0082;
+  text-align: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
-.story-dots {
-  margin-top: 12px;
+.menu-section h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.menu-list {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.story-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #ccc;
-  cursor: pointer;
+.menu-item {
+  text-align: center;
 }
 
-.story-dot.active {
-  background: #b026ff;
-  transform: scale(1.3);
+.menu-item img {
+  width: 140px;
+  margin-bottom: 8px;
 }
 
-/* ===========================
-   ANIMAÇÕES
-=========================== */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
+.menu-item p {
+  font-size: 20px;
+  font-weight: 700;
 }
 
-@keyframes fadeLeft {
-  from { opacity: 0; transform: translateX(50px); }
-  to   { opacity: 1; transform: translateX(0); }
+/* WHATSAPP BUTTON */
+.btn-whatsapp {
+  margin-top: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  padding: 20px 40px;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
 }
-
-.animate-fade-up {
-  animation: fadeUp .8s ease forwards;
-}
-
-.animate-fade-left {
-  animation: fadeLeft .9s ease forwards;
+.btn-whatsapp img {
+  width: 32px;
 }
